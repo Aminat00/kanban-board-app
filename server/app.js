@@ -73,31 +73,6 @@ app.post("/getValidToken", async (req, res) => {
 	}
 })
 
-/*
-app.post("/storeTokenData", async (token, refreshToken, expirationDate) => {
-	const newToken = new Token({
-		accessToken: token,
-		refreshToken: refreshToken,
-		expirationDate: expirationDate,
-	})
 
-	try {
-		await newToken.save()
-	} catch (error) {
-		console.log(error)
-	}
-})
-
-app.get("/getCalendarEvents", async (req, res) => {
-	try {
-		const calendarId = req.query.calendarId
-		const events = await getCalendarEvents(calendarId)
-		await saveCalendarEvents(events)
-		res.send(events)
-	} catch (error) {
-		console.error(error)
-		res.status(500).send(error.message)
-	}
-})*/
 
 module.exports = app
